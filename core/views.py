@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
 
-# Create your views here.
+from core.models import City
+from core.serializers import CitySerializer
+
+
+class CityModelViewSet(ModelViewSet):
+    queryset = City.objects.all()
+    serializer_class = CitySerializer
