@@ -16,3 +16,18 @@ class City(models.Model):
     class Meta:
         verbose_name = "city"
         verbose_name_plural = "cities"
+
+
+class SearchResult(models.Model):
+    city = models.ForeignKey(City, on_delete=models.CASCADE, related_name="results")
+    start_date = models.DateField()
+    end_date = models.DateField()
+    earthquake_date = models.DateField(blank=True, null=True)
+    title = models.CharField(max_length=100, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.city} - {self.earthquake_date} - {self.title}"
+
+    class Meta:
+        verbose_name = "Search result"
+        verbose_name_plural = "Search results"
