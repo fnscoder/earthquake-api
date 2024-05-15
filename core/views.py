@@ -12,7 +12,6 @@ class CityModelViewSet(ModelViewSet):
 
 
 class EarthquakeSearchViewSet(ViewSet):
-
     def find_existing_search_result(self, validated_data):
         """
         Find an existing search result by city, start date, and end date.

@@ -8,12 +8,12 @@ pytestmark = pytest.mark.django_db
 
 
 city_data = {
-        "name": "Los Angeles",
-        "state": "CA",
-        "country": "USA",
-        "lat": 34.0522,
-        "long": 118.2437,
-    }
+    "name": "Los Angeles",
+    "state": "CA",
+    "country": "USA",
+    "lat": 34.0522,
+    "long": 118.2437,
+}
 
 url_list = reverse("city-list")
 
@@ -81,8 +81,7 @@ def test_partial_update_city(client: APIClient):
     city = City.objects.create(**city_data)
     url = reverse("city-detail", kwargs={"pk": city.id})
 
-    new_data = {"country": "United States of America"
-    }
+    new_data = {"country": "United States of America"}
 
     response = client.patch(url, new_data, content_type="application/json")
 

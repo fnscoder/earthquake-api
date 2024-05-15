@@ -32,13 +32,10 @@ features = {
                 "gap": 45,
                 "magType": "mb",
                 "type": "earthquake",
-                "title": "M 5.0 - 144 km WSW of Ternate, Indonesia"
+                "title": "M 5.0 - 144 km WSW of Ternate, Indonesia",
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [126.2436, 0.1655, 10]
-            },
-            "id": "us7000e9r2"
+            "geometry": {"type": "Point", "coordinates": [126.2436, 0.1655, 10]},
+            "id": "us7000e9r2",
         },
         {
             "type": "Feature",
@@ -68,13 +65,10 @@ features = {
                 "gap": 26,
                 "magType": "mww",
                 "type": "earthquake",
-                "title": "M 5.3 - Molucca Sea"
+                "title": "M 5.3 - Molucca Sea",
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [126.2897, 0.34, 8.6]
-            },
-            "id": "us7000e9p4"
+            "geometry": {"type": "Point", "coordinates": [126.2897, 0.34, 8.6]},
+            "id": "us7000e9p4",
         },
         {
             "type": "Feature",
@@ -104,13 +98,10 @@ features = {
                 "gap": 75,
                 "magType": "mww",
                 "type": "earthquake",
-                "title": "M 5.9 - 149 km W of Gold Beach, Oregon"
+                "title": "M 5.9 - 149 km W of Gold Beach, Oregon",
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-126.218, 42.2405, 13.91]
-            },
-            "id": "us7000e9mr"
+            "geometry": {"type": "Point", "coordinates": [-126.218, 42.2405, 13.91]},
+            "id": "us7000e9mr",
         },
         {
             "type": "Feature",
@@ -140,13 +131,10 @@ features = {
                 "gap": 74,
                 "magType": "mww",
                 "type": "earthquake",
-                "title": "M 5.9 - 153 km W of Gold Beach, Oregon"
+                "title": "M 5.9 - 153 km W of Gold Beach, Oregon",
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-126.2778, 42.2881, 16.57]
-            },
-            "id": "us7000e9mg"
+            "geometry": {"type": "Point", "coordinates": [-126.2778, 42.2881, 16.57]},
+            "id": "us7000e9mg",
         },
         {
             "type": "Feature",
@@ -176,13 +164,10 @@ features = {
                 "gap": 26,
                 "magType": "mb",
                 "type": "earthquake",
-                "title": "M 5.1 - 19 km S of Carora, Venezuela"
+                "title": "M 5.1 - 19 km S of Carora, Venezuela",
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-70.0634, 9.9933, 10]
-            },
-            "id": "us7000e9hi"
+            "geometry": {"type": "Point", "coordinates": [-70.0634, 9.9933, 10]},
+            "id": "us7000e9hi",
         },
         {
             "type": "Feature",
@@ -212,13 +197,10 @@ features = {
                 "gap": 30,
                 "magType": "mb",
                 "type": "earthquake",
-                "title": "M 5.0 - central Mid-Atlantic Ridge"
+                "title": "M 5.0 - central Mid-Atlantic Ridge",
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-31.5117, 3.8327, 10]
-            },
-            "id": "us7000e9cx"
+            "geometry": {"type": "Point", "coordinates": [-31.5117, 3.8327, 10]},
+            "id": "us7000e9cx",
         },
         {
             "type": "Feature",
@@ -248,13 +230,10 @@ features = {
                 "gap": 34,
                 "magType": "mb",
                 "type": "earthquake",
-                "title": "M 5.1 - 132 km WSW of Ternate, Indonesia"
+                "title": "M 5.1 - 132 km WSW of Ternate, Indonesia",
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [126.293, 0.3224, 35]
-            },
-            "id": "us7000e9cj"
+            "geometry": {"type": "Point", "coordinates": [126.293, 0.3224, 35]},
+            "id": "us7000e9cj",
         },
         {
             "type": "Feature",
@@ -284,13 +263,10 @@ features = {
                 "gap": 30,
                 "magType": "mww",
                 "type": "earthquake",
-                "title": "M 6.2 - 132 km WSW of Ternate, Indonesia"
+                "title": "M 6.2 - 132 km WSW of Ternate, Indonesia",
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [126.2911, 0.3165, 26]
-            },
-            "id": "us7000e9bi"
+            "geometry": {"type": "Point", "coordinates": [126.2911, 0.3165, 26]},
+            "id": "us7000e9bi",
         },
         {
             "type": "Feature",
@@ -320,13 +296,10 @@ features = {
                 "gap": 28,
                 "magType": "mww",
                 "type": "earthquake",
-                "title": "M 5.0 - Southern Qinghai, China"
+                "title": "M 5.0 - Southern Qinghai, China",
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [97.8048, 34.6927, 10]
-            },
-            "id": "us7000e9a3"
+            "geometry": {"type": "Point", "coordinates": [97.8048, 34.6927, 10]},
+            "id": "us7000e9a3",
         },
         {
             "type": "Feature",
@@ -356,13 +329,10 @@ features = {
                 "gap": 30,
                 "magType": "mww",
                 "type": "earthquake",
-                "title": "M 5.4 - 82 km SW of Atocha, Bolivia"
+                "title": "M 5.4 - 82 km SW of Atocha, Bolivia",
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-66.7637, -21.4857, 231.48]
-            },
-            "id": "us6000egm7"
+            "geometry": {"type": "Point", "coordinates": [-66.7637, -21.4857, 231.48]},
+            "id": "us6000egm7",
         },
         {
             "type": "Feature",
@@ -392,14 +362,11 @@ features = {
                 "gap": 53,
                 "magType": "mww",
                 "type": "earthquake",
-                "title": "M 5.5 - south of Panama"
+                "title": "M 5.5 - south of Panama",
             },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-82.677, 5.046, 10]
-            },
-            "id": "us6000eglq"
-        }
+            "geometry": {"type": "Point", "coordinates": [-82.677, 5.046, 10]},
+            "id": "us6000eglq",
+        },
     ]
 }
 
@@ -412,9 +379,11 @@ city_data = {
     "long": -118.2437,
 }
 
+
 @pytest.fixture
 def city():
     return City.objects.create(**city_data)
+
 
 @pytest.fixture
 def searched_result(city):
@@ -423,5 +392,5 @@ def searched_result(city):
         start_date="2021-06-01",
         end_date="2021-06-05",
         title="M 5.9 - 149 km W of Gold Beach, Oregon",
-        earthquake_date="2021-06-04"
+        earthquake_date="2021-06-04",
     )

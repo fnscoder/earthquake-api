@@ -13,6 +13,7 @@ pytestmark = pytest.mark.django_db
 
 search_url = reverse("search")
 
+
 @mock.patch("requests.get")
 def test_search_no_results_found(mock_usgs, client: APIClient, city):
     """Test search earthquakes for a city return no results"""
@@ -61,10 +62,12 @@ def test_search_found_searched_results(client: APIClient, city, searched_result)
     [
         ("start_date=2021-06-01&end_date=2021-06-05", "city"),
         ("start_date=2021-06-01&city=1", "end_date"),
-        ("end_date=2021-06-05&city=1", "start_date")
-    ]
+        ("end_date=2021-06-05&city=1", "start_date"),
+    ],
 )
-def test_search_missing_city_query_params(search_params, field, client: APIClient, city):
+def test_search_missing_city_query_params(
+    search_params, field, client: APIClient, city
+):
     """Test search earthquakes for a city validation for missing parameters"""
     response = client.get(f"{search_url}?{search_params}")
 

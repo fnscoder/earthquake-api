@@ -9,5 +9,5 @@ router.register("cities", CityModelViewSet, "city")
 
 urlpatterns = [
     path("", include(router.urls)),
-    path("search/", EarthquakeSearchViewSet.as_view({'get': 'list'}), name="search"),
+    path("search/", EarthquakeSearchViewSet.as_view({"get": "list"}), name="search"),
 ]

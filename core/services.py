@@ -19,7 +19,7 @@ class EarthquakeService:
         usgs_search_params = {
             "starttime": data["start_date"],
             "endtime": data["end_date"],
-            "minmagnitude": MIN_MAGNITUDE
+            "minmagnitude": MIN_MAGNITUDE,
         }
         response = requests.get(USGS_API_URL, params=usgs_search_params)
         response.raise_for_status()
@@ -48,7 +48,9 @@ class EarthquakeService:
                 if distance < nearest_distance:
                     nearest_distance = distance
                     timestamp = earthquake["properties"]["time"]
-                    earthquake_data["earthquake_date"] = datetime.fromtimestamp(timestamp / 1000).date()
+                    earthquake_data["earthquake_date"] = datetime.fromtimestamp(
+                        timestamp / 1000
+                    ).date()
                     earthquake_data["title"] = earthquake["properties"]["title"]
             except KeyError as e:
                 logger.error(f"Error when processing earthquake data: {e}")
