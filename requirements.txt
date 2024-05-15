@@ -8,6 +8,7 @@ gunicorn==22.0.0
 haversine==2.8.1
 idna==3.7
 iniconfig==2.0.0
+mock==5.1.0
 packaging==24.0
 pluggy==1.5.0
 psycopg2-binary==2.9.9
