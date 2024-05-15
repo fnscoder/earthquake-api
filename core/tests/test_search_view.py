@@ -21,18 +21,15 @@ def test_search_no_results_found(mock_usgs, client: APIClient, city):
     usgs_search_params = f"start_date=2021-06-01&end_date=2021-07-01&city={city.id}"
     response = client.get(f"{search_url}?{usgs_search_params}")
 
-    expected = "No results found"
-
     assert response.status_code == status.HTTP_200_OK
-    assert response.json() == expected
+    assert response.json()["title"] is None
+    assert response.json()["earthquake_date"] is None
 
 
 @mock.patch("requests.get")
 def test_search_found_results(mock_usgs, client: APIClient, city):
     """Test search earthquakes for a city successfully"""
     mock_usgs.return_value = mock.Mock(json=lambda: features, status_code=200)
-    expected = ("Result for Los Angeles between June 01 2021 and June 05 2021 : "
-                "The closest Earthquake to Los Angeles was a M 5.9 - 149 km W of Gold Beach, Oregon on June 04 2021")
 
     assert SearchResult.objects.count() == 0
 
@@ -40,22 +37,22 @@ def test_search_found_results(mock_usgs, client: APIClient, city):
     response = client.get(f"{search_url}?{usgs_search_params}")
 
     assert response.status_code == status.HTTP_200_OK
-    assert response.json() == expected
+    assert response.json()["title"] == "M 5.9 - 149 km W of Gold Beach, Oregon"
+    assert response.json()["earthquake_date"] == "2021-06-04"
     assert SearchResult.objects.count() == 1
 
 
 def test_search_found_searched_results(client: APIClient, city, searched_result):
     """Test search earthquakes for a city successfully with previous searched results"""
     usgs_search_params = f"start_date=2021-06-01&end_date=2021-06-05&city={city.id}"
-    expected = ("Result for Los Angeles between June 01 2021 and June 05 2021 : "
-                "The closest Earthquake to Los Angeles was a M 5.9 - 149 km W of Gold Beach, Oregon on June 04 2021")
 
     assert SearchResult.objects.count() == 1
 
     response = client.get(f"{search_url}?{usgs_search_params}")
 
     assert response.status_code == status.HTTP_200_OK
-    assert response.json() == expected
+    assert response.json()["title"] == "M 5.9 - 149 km W of Gold Beach, Oregon"
+    assert response.json()["earthquake_date"] == "2021-06-04"
     assert SearchResult.objects.count() == 1
 
 

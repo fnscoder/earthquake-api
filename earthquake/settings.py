@@ -131,3 +131,23 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 USGS_API_URL = config("USGS_API_URL")
 MIN_MAGNITUDE = config("MIN_MAGNITUDE")
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": "WARNING",
+    },
+    "formatters": {
+        "verbose": {
+            "format": "{asctime} {levelname} {message}",
+            "style": "{",
+        },
+    },
+}
