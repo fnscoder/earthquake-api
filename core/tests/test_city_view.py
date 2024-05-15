@@ -12,7 +12,7 @@ city_data = {
     "state": "CA",
     "country": "USA",
     "lat": 34.0522,
-    "long": 118.2437,
+    "long": -118.2437,
 }
 
 url_list = reverse("city-list")
@@ -31,13 +31,30 @@ def test_create_city_validation_error(client: APIClient):
         "state": "CA",
         "country": "USA",
         "lat": 34.0522,
-        "long": 118.2437,
+        "long": -118.2437,
     }
 
     response = client.post(url_list, data)
 
     assert response.status_code == 400
     assert response.json()["name"][0] == "This field is required."
+
+
+def test_create_city_validation_error_invalid_lat_and_long(client: APIClient):
+    """Test create a city via API raise error when wrong lat and long"""
+    data = {
+        "name": "City Name",
+        "state": "CA",
+        "country": "USA",
+        "lat": 134.0522,
+        "long": -218.2437,
+    }
+
+    response = client.post(url_list, data)
+
+    assert response.status_code == 400
+    assert response.json()["lat"][0] == "Latitude must be between -90 and 90 degrees."
+    assert response.json()["long"][0] == "Longitude must be between -180 and 180 degrees."
 
 
 def test_retrieve_cities_list_successful(client: APIClient):

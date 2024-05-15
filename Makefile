@@ -7,6 +7,9 @@ up:
 migrate:
 	docker compose run app python manage.py migrate
 
+makemigrations:
+	docker compose run app python manage.py makemigrations
+
 stop:
 	docker compose stop
 

@@ -45,6 +45,7 @@ class EarthquakeService:
                 eq_lat = earthquake["geometry"]["coordinates"][1]
                 eq_long = earthquake["geometry"]["coordinates"][0]
                 distance = haversine((eq_lat, eq_long), (city.lat, city.long))
+
                 if distance < nearest_distance:
                     nearest_distance = distance
                     timestamp = earthquake["properties"]["time"]
@@ -52,7 +53,7 @@ class EarthquakeService:
                         timestamp / 1000
                     ).date()
                     earthquake_data["title"] = earthquake["properties"]["title"]
-            except KeyError as e:
+            except (KeyError, ValueError) as e:
                 logger.error(f"Error when processing earthquake data: {e}")
 
         return earthquake_data
