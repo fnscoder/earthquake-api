@@ -28,10 +28,10 @@ This endpoint receives 3 query params:
 The dates must be in this format `YYYY-mm-dd`
 The city is the city_id
 
-All the query params are required.
-This endpoint validate the query params. Then check if there is a previous search made with the same params.
+All the query parameters are required.
+This endpoint validates the query parameters. Then check if there is a previous search made with the same params.
 If there is, the search result is returned. If not, the earthquake service is called to hit on the USGS API and find
-the nearest earthquake. After processing the response a SearchResult object is created and store on the db to make the
+the nearest earthquake. After processing the response a SearchResult object is created and stored on the db to make the
 next searches faster and the result is returned to the client.
 
 If any error occurs a message is logged.
@@ -72,8 +72,8 @@ make help
 There are a few things I would like to improve in a further version of this project:
 * Add Sentry for better monitoring
 * Add Django debug toolbar or silk
-* Add a validation to avoid having repeated cities (currently the API don't validate duplicated cities entries)
+* Add a validation to avoid having repeated cities (currently the API doesn't validate duplicated cities entries)
 * Add more tests
-* Create a CI/CD pipeline with github actions or any other tool to run the tests and linters
+* Create a CI/CD pipeline with GitHub actions or any other tool to run the tests and linter
 * Add authentication and track who created/updated the cities info and who made the searches
-* Add a support for automated documentation with OpenAPI 
+* Add support for automated documentation with OpenAPI 
