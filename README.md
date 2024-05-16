@@ -49,6 +49,7 @@ It was created a migration file to pre-populate the database with the cities men
 * Docker
 * Docker Compose
 * RUFF
+* [Haversine](https://pypi.org/project/haversine/) package to calculate the distance between two points using [Haversine Formula](https://en.wikipedia.org/wiki/Haversine_formula)
 
 ## How to run the project with Docker (recommended)
 
