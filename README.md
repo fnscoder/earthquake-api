@@ -36,6 +36,11 @@ next searches faster and the result is returned to the client.
 
 If any error occurs a message is logged.
 
+It was created a migration file to pre-populate the database with the cities mentioned on the PDF file:
+* Los Angeles
+* San Francisco
+* Tokyo
+
 ## Stack used
 * Python 3.11
 * Django 5
@@ -74,7 +79,7 @@ If any error occurs a message is logged.
 There are a few things I would like to improve in a further version of this project:
 * Add Sentry for better monitoring
 * Add Django debug toolbar or silk for performance measurement
-* Add a validation to avoid having repeated cities (currently the API doesn't validate duplicated cities entries)
+* Add a validation to avoid having duplicated cities (currently the API doesn't validate duplicated cities entries)
 * Integrate the Frontend with a location API such as Google Maps API when creating a new city
 * Add more tests
 * Configure pre-commit to run the tests and linter before any commit
