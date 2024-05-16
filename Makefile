@@ -2,6 +2,9 @@ build:
 	docker compose build --no-cache
 	
 up:
+	docker compose up
+
+upd:
 	docker compose up -d
 
 migrate:
@@ -30,3 +33,21 @@ lint:
 
 format:
 	docker compose run app ruff format .
+
+help:
+	@echo "  Makefile options"
+	@echo "  |"
+	@echo "  |_ help (default)          - Show this message"
+	@echo "  |"
+	@echo "  |_ build                   - Build the docker image"
+	@echo "  |_ up                      - Run the project with compose"
+	@echo "  |_ upd                     - Run the project with compose and -d option"
+	@echo "  |_ migrate                 - Run migrations"
+	@echo "  |_ makemigrations          - Create migrations"
+	@echo "  |_ stop                    - Stop the docker containers"
+	@echo "  |_ test                    - Run the tests with pytest"
+	@echo "  |_ statics                 - Collect statics (useful to use the admin site)"
+	@echo "  |_ createsuperuser         - Create super user to access the admin"
+	@echo "  |_ bash                    - Run the bash inside the container"
+	@echo "  |_ lint                    - Check lint with RUFF"
+	@echo "  |_ format                  - Format the code with RUFF"
