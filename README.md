@@ -49,31 +49,35 @@ If any error occurs a message is logged.
 
 ```
 1. Clone the project
+ $ git clone <repo_url>
+ 
 2. Enter on the project folder
+ $ cd earthquake-api
+ 
 3. Create your .env file
+ $ cp contrib/.env-sample .env
+ 
 4. Build the project
+ $ make build
+ 
 5. Run the project
+ $ make up
+ 
 6. Run the migrations
+ $ make migrate
+ 
 7. Check the Makefile for more options
-```
-
-On the terminal:
-```
-git clone <repo_url>
-cd earthquake-api
-cp contrib/.env-sample .env
-make build
-make up
-make migrate
-make help
+ $ make help
 ```
 
 ## Next steps and future improvements
 There are a few things I would like to improve in a further version of this project:
 * Add Sentry for better monitoring
-* Add Django debug toolbar or silk
+* Add Django debug toolbar or silk for performance measurement
 * Add a validation to avoid having repeated cities (currently the API doesn't validate duplicated cities entries)
+* Integrate the Frontend with a location API such as Google Maps API when creating a new city
 * Add more tests
+* Configure pre-commit to run the tests and linter before any commit
 * Create a CI/CD pipeline with GitHub actions or any other tool to run the tests and linter
 * Add authentication and track who created/updated the cities info and who made the searches
 * Add support for automated documentation with OpenAPI 
