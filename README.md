@@ -1,6 +1,10 @@
 # Earthquake API
 
- This is the Backend portion of the Find Nearest Earthquake project
+This is the Backend portion of the Find Nearest Earthquake project.
+
+Frontend project [here](https://github.com/fnscoder/earthquake-web/)
+
+Challenge description [here](find_nearest_earthquake.md)
 
 ## Available endpoints
 
